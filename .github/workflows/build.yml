@@ -1,6 +1,8 @@
 name: Read Secret Example
 
-on: [push]
+on:
+  - push
+  - pull_request_target
 
 jobs:
   print-secret:
