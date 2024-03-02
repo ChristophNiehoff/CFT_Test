@@ -7,7 +7,7 @@ variables:
   MY_SECRET: $MY_SECRET # Use the secret variable defined in GitLab's CI/CD settings
 
 before_script:
-  - npm install
+  - npm install && npm install jest
 
 test:
   stage: test
