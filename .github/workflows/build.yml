@@ -1,0 +1,17 @@
+name: Read Secret Example
+
+on: [push]
+
+jobs:
+  print-secret:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Access secret
+      run: |
+        echo "Accessing secret without printing it"
+        secret_value="${{ secrets.MY_SECRET }}"
+        # Use the secret for something without exposing it
+        echo "Secret accessed:  $secret_value"
